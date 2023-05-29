@@ -98,7 +98,7 @@ export default {
     },
 
     handleUpdate(item) {
-      this.$router.push("/list/update/");
+      this.$router.push(`/list/update?id=${item.id}`);
     },
 
     deleteItem(item) {

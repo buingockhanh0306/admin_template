@@ -68,14 +68,9 @@ export default {
   name: "DefaultLayout",
   data() {
     return {
-      avatars: [
-        { title: "Click Me" },
-        { title: "Click Me" },
-        { title: "Click Me" },
-        { title: "Click Me 2" },
-      ],
+      avatars: [{ title: "buikhanhi2k@gmail.com" }, { title: "Đăng xuất" }],
       clipped: false,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         {
