@@ -47,7 +47,9 @@
             :key="index"
             :value="index"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title style="cursor: pointer">{{
+              item.title
+            }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -80,7 +82,7 @@ export default {
         },
         {
           icon: "mdi-chart-bubble",
-          title: "Inspire",
+          title: "Danh sách bài viết",
           to: "/list",
         },
       ],

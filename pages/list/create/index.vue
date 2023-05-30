@@ -10,6 +10,7 @@
 <script>
 import Editor from "@tinymce/tinymce-vue";
 import FormEdit from "~/components/FormEdit";
+import { mapActions } from "vuex";
 export default {
   components: {
     editor: Editor,
@@ -18,17 +19,18 @@ export default {
   data() {
     return {
       formData: {
-        content: "",
         title: "",
-        slug: "",
+        attachment: "",
+        content: "",
         author: "",
-        note: "",
       },
     };
   },
   methods: {
-    handleCreate(formData) {
-      console.log(formData);
+    ...mapActions(["createPost"]),
+    async handleCreate(formData) {
+      await this.createPost(formData);
+      this.$router.push("/list/");
     },
   },
 };
